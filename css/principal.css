@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #E9ECF4;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1300px;
+    margin: 5px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header header"
+        "contenido contenido contenido"
+        "widget-1 widget-1 widget-1"
+        "footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .header {
+    background: #12203E;
+    color: #fff;
+    grid-area: header;
+    text-align: center;
+}
+
+ul,
+ol {
+    list-style: none;
+
+}
+
+.nav {
+    margin-left: 20%;
+}
+
+.nav > li {
+    float: left;
+}
+
+.nav li a {
+    background-color: #12203E;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 65px;
+    display: block;
+}
+
+.nav li a:hover {
+    background-color: #434343;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+
+}
+
+.nav li:hover > ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 100%;
+    cursor: default;
+    width: auto;
+}
+
+.nav li ul li {
+    position: relative;
+}
+
+.nav li ul li ul {
+    right: -140px;
+    top: 0px;
+}
+
+
+
+
+
+
+.contenedor .contenido {
+    grid-area: contenido;
+}
+
+.contenedor .sidebar {
+    grid-column: 3 / 4;
+    background: #fAA43D;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    grid-area: sidebar;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2 {
+    background: #FFF;
+    color: #fff;
+    height: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .widget-1 {
+    grid-area: widget-1;
+}
+
+.contenedor .widget-2 {
+    grid-area: widget-2;
+}
+
+.contenedor .footer {
+    background: #12203E;
+    color: #fff;
+    grid-area: footer;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-areas: "header header header"
+            "contenido contenido contenido"
+            "sidebar sidebar sidebar"
+            "widget-1 widget-1 widget-2"
+            "footer footer footer";
+    }
+}
+
+
+#main-container {
+    margin: 150px auto;
+    width: 600px;
+}
+
+table {
+    background-color: #55a8fd;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    padding: 10px;
+    color: #FFF;
+}
+
+td {
+    padding: 10px;
+    color: #000;
+}
+
+thead {
+    background-color: #12203E;
+    border-bottom: solid 5px #0F362D;
+    color: #FFF;
+}
+
+.oculto {
+    display: none;
+}
+

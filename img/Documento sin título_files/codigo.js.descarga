@@ -1,0 +1,47 @@
+// JavaScript Document
+function fechaNac(){
+var fecha=document.getElementById("fechaNac").value;
+ var fechaNace = new Date(fecha);
+  var fechaActual = new Date()
+  var mes = fechaActual.getMonth();
+    var dia = fechaActual.getDate();
+    var año = fechaActual.getFullYear();
+	fechaActual.setDate(dia);
+    fechaActual.setMonth(mes);
+    fechaActual.setFullYear(año);
+	edad = Math.floor(((fechaActual - fechaNace) / (1000 * 60 * 60 * 24) / 365));	
+	return edad;
+}
+function validarForm(){
+	var indice = document.getElementsByTagName("select");
+	var edad=fechaNac();
+	ind=indice[0].value;
+	if(ind==1){
+		if(edad>=23 && edad<=28) {
+			alert("Usuario Registrado");
+			
+		}else{
+			alert("No es posible registar");
+		}
+	}else if(ind==2){
+		if(edad>=30 && edad<=35) {
+			alert("Usuario Registrado");
+			
+		}else{
+			alert("No es posible registar");
+		}
+		
+	}else if(ind==3){
+		if(edad>=35 && edad<=40) {
+			alert("Usuario Registrado");
+			
+		}else{
+			alert("No es posible registar");
+		}
+		
+	}
+}
+
+	
+	
+

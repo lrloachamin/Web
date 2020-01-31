@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  padding: 0;
+  background:  #000;
+  background-size: cover;
+  font-family: sans-serif;
+}
+.register-box{
+	border:2px solid #c84344;
+	border-radius:24px;
+	width: 35%;
+	height: 980px;
+	background: transparent;
+	color: #FFF;
+	top: 80%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 30px 30px;
+	text-align:center;
+}
+.login-box{
+	border:2px solid #c84344;
+	border-radius:24px;
+	width: 25%;
+	height: 90%;
+	background: transparent;
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 30px 30px;
+	text-align:center;
+}
+.login-box h1,.register-box h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+.login-box h2,.register-box h2 {
+ margin: 0;
+ padding: 0;
+ color:#FFF;
+ font-size:14px;
+ margin: 10px;
+}
+
+.login-box label,.register-box label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+}
+.login-box input,.register-box input  {
+	text-align:center;
+  width: 100%;
+  margin-bottom: 20px;
+   
+  
+}
+
+.login-box input[type="text"], .login-box input[type="password"],.login-box input[type="date"] {
+	border: none;
+  border-bottom: 2px solid #c84344;
+background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+
+  font-size: 16px;
+}
+
+.login-box input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #c84344;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  width:75%;
+}
+
+.login-box input[type="submit"]:hover {
+  cursor: pointer;
+  background: #ffc107;
+  color: #000;
+}
+.register-box input[type="text"], .register-box input[type="password"],.register-box input[type="date"] {
+	border: none;
+  border-bottom: 2px solid #c84344;
+background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+   transition: width 2s;
+}
+
+.register-box input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #c84344;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  width:75%;
+}
+
+.register-box input[type="submit"]:hover {
+  cursor: pointer;
+  background: #ffc107;
+  color: #000;
+}
+.grid-1 {
+  display: grid;
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+  
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 135px 90px 200px 180px 90px;
+  grid-gap: 20px;
+  
+  grid-template-areas: "header   	header  "
+                       "menu     	menu     "
+	  				   "panel-3	panel-3	"
+	  				   "panel-3   panel-3 "
+					   "footer		footer";
+}
+
+/* items */
+
+#nombre, #materia{
+	padding: 10px;
+	color: #252525;
+}
+.grid-1 div {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 15px 15px 15px 15px;
+  }
+
+/* specific item styles */
+
+.item-1 {
+  background: #900;
+  grid-area: header;
+}
+.item-2 {
+  background: #900;
+  grid-area: menu;
+}
+.item-3 {
+  text-align: center;
+  background: #30997a;
+  grid-area: panel-3;
+}
+.item-4 {
+	text-align: center;
+  background: #6a478f;
+  grid-area: panel-4;  
+}
+
+.item-7 {
+  background: #900;
+	text-align: center;
+	font-family: "cabin-sketch";
+	grid-area: footer;
+}
+ul, ol {
+				list-style:none;
+			}
+			
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color: #33a8a5;
+				color:#fff;
+				text-decoration:none;
+				padding: 5px 25px;
+				display: block;
+			}
+			
+			.nav li a:hover {
+				background-color:#434343;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width: 200px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top: 0px;
+			}
+
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:90%;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+
+.btn-borde{
+  font-size: 20px;	
+  padding: .375rem .75rem;
+  border: 1px solid #007bff;
+  border-radius: .25rem;
+  color: #007bff;
+  transition: color .15s ease-in-out,
+    background-color .15s ease-in-out;
+}
+
+.btn-borde:hover, .btn-borde:active, .btn-borde:focus {
+  color: #fff;
+  background-color: #ffc107;
+}
+
+
+
+
