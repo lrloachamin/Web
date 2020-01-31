@@ -47,26 +47,33 @@ body {
 	width: 138px;
 	height: 41px;
 	z-index: 3;
-	left: 1219px;
-	top: 24px;
+	left: 1057px;
+	top: 33px;
 }
 </style>
 <link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
 <script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
-<link rel="stylesheet" href="../Css/estilos.css">
+<link rel="stylesheet" href="../../css/principal.css">
 </head> 
 <body>
 
 <div id="apDiv1">
   <ul id="MenuBar1" class="MenuBarHorizontal">
 <li>
-  <div align="center"><a href="../principal.php">Regresar al Men&uacute;</a></div>
+  <div align="center" style="background:#09F;"><a href="../principal.php">Regresar al Men&uacute;</a></div>
 </li>
   </ul>
 </div>
-<h1>MODIFICAR ASIGNATURAS</h1>
+
+ <div class="contenedor">
+        <header class="header">
+            <center>
+               <h2>MODIFICAR ASIGNATURAS</h2>
+            </center>
+</header>
+
 	
-<div id="apDiv2">
+<main class="contenido">
  
   <table class="tabla" width="726" height="159" border="1">
     
@@ -79,7 +86,7 @@ body {
 	</tr>
 	
 	<?php
-    $conexion=mysqli_connect("localhost","admin","admin","proyecto_webfinal");
+    $conexion=mysqli_connect("localhost","admin","admin","proyecto_f");
     $consulta="SELECT * FROM asignatura";
     $resultado=mysqli_query($conexion,$consulta);
     while($fila = $resultado->fetch_assoc()){
@@ -114,7 +121,13 @@ body {
 	}
 	?>
   </table>
-</div>
+</main>
+  <footer class="footer">
+            <center>
+                <p>Derechos Reservados ©<p>
+                        <p>Comunicarse al 234567 para mas información</p>
+            </center>
+        </footer>
 <script type="text/javascript">
 var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
 </script>

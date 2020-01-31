@@ -11,17 +11,53 @@ class HorarioBT
     $Obj_horario=new HorarioDB();
 	return $Obj_horario->generarHorario($curso);
 	}
-	function guardarHorario($idmateria,$dia,$hora,$curso)
- 	{
-	$Obj_horario=new HorarioDB();
-	return $Obj_horario->guardarHorario($idmateria,$dia,$hora,$curso);		
-	}
-	function mostrarHorario($hora,$dia)
+	function mostrarHorario($hora,$dia,$curso)
  	{
 		$Obj_horario=new HorarioDB();
-		return $Obj_horario->mostrarHorario($hora,$dia);
+		return $Obj_horario->mostrarHorario($hora,$dia,$curso);
 		
 	}
+		function recuperarProfesor($mat,$dispo,$curso)
+ 	{
+			$Obj_horario=new HorarioDB();
+		return $Obj_horario->recuperarProfesor($mat,$dispo,$curso);
+		
+	}
+		function verificarDisponibilidad($mat,$dispo)
+ 	{
+		$Obj_horario=new HorarioDB();
+		return $Obj_horario->verificarDisponibilidad($mat,$dispo);
+		
+	}
+			function verificarHora($prof_id,$hora,$dia)			
+ 	{
+		$Obj_horario=new HorarioDB();
+		return $Obj_horario->verificarHora($prof_id,$hora,$dia);
+	}
+			function guardarHorario($idProf,$idAsig,$i,$j,$curso)
+ 	{
+		$Obj_horario=new HorarioDB();
+		return $Obj_horario->guardarHorario($idProf,$idAsig,$i,$j,$curso);
+		
+	}
+	function seleccionarProfesor($idProf)
+ 	{
+		$Obj_horario=new HorarioDB();
+		return $Obj_horario->seleccionarProfesor($idProf);
+		
+	}
+		function actualizarHorasProfesor($idProf,$horasProfesor)
+ 	{
+		$Obj_horario=new HorarioDB();
+		return $Obj_horario->actualizarHorasProfesor($idProf,$horasProfesor);
+		
+	}
+	function mostrarCursos(){
+		$Obj_horario=new HorarioDB();
+		return $Obj_horario->mostrarCursos();
+	}
+	
+    	
 	
 	
 }

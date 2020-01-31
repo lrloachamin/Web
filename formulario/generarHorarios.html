@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Generar Horarios</title>
+<script type="text/javascript" src="../js/impresion.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="../css/horario.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="contenedor">
+		<header class="header">
+			<h2>Generador de Horario</h2>
+		</header>
+		<main class="contenido">
+			<b>Ingrese Nombre del curso</b>
+          <input type="text" id="nombre"/>
+             <b>Ingrese el Paralelo</b>
+             
+            <select id="paralelo">
+  				<option value= '0'>A</option>
+  				<option value= '1'>B</option>
+                <option value= '2'>C</option>
+                <option value= '3'>D</option>
+			</select>
+          <b> Ingrese el Grado</b>
+            <select id="curso">
+  				<option value="Basica">8vo de Basica</option>
+  				<option value="Basica">9no de Basica</option>
+                <option value="Basica">10mo de Basica</option>
+                <option value="1ero Bachillerato">1ero Bachillerato</option>
+                <option value="2do Bachillerato">2do Bachillerato</option>
+                <option value="3ero Bachillerato">3ero Bachillerato</option>
+			</select>
+       
+        <input type="button" name="enviar" value="Generar" href="javascript:;" onclick="imprimir($('#nombre').val(),$('#curso').val(),$('#paralelo').val());">
+            
+		</main>
+		<div class="widget-1" id="resultado">
+		  <table border="1">
+		    <thead>
+            <th>Horas</th>
+		      <th >Lunes</th>
+		      <th >Martes</th>
+		      <th >Miercoles</th>
+		      <th>Jueves </th>
+		      <th >Viernes</th>
+		    </thead>
+		      <td>7:00-7:40</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+              <td>&nbsp;</td>
+	        </tr>
+		    <tr>
+		      <td>7:40-8:20</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+              <td>&nbsp;</td>
+	        </tr>
+		    <tr>
+		      <td>8:20-9:00</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+              <td>&nbsp;</td>
+	        </tr>
+		    <tr>
+		      <td>9:00-9:40</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+              <td>&nbsp;</td>
+	        </tr>
+		    <tr>
+		      <td>10:10-10:50</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+              <td>&nbsp;</td>
+	        </tr>
+		    <tr>
+		      <td>10:50-11:30</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+              <td>&nbsp;</td>
+	        </tr>
+		    <tr>
+		      <td>11:30-12:10</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+              <td>&nbsp;</td>
+	        </tr>
+		    <tr>
+		      <td>12:10-12:50</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+              <td>&nbsp;</td>
+	        </tr>
+	      </table>
+       
+			
+		</div>
+	</div>
+
+</body>
+</html>

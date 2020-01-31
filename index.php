@@ -10,8 +10,8 @@
 <body>
     <?php
     date_default_timezone_set("America/Guayaquil");
-    $inicio= 11; # Desde las ocho de la mañana.
-    $fin= 16; # Hasta las 16 horas de la tarde.
+    $inicio= 1; # Desde las ocho de la mañana.
+    $fin= 7; # Hasta las 16 horas de la tarde.
 
     $HoraActual = intval(date("H"));// Hora actual del Pais de residencia.
     if ($HoraActual >=  $inicio && $HoraActual < $fin) {

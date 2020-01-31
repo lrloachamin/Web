@@ -21,7 +21,7 @@
 <body>
     <?php
     $id=$_REQUEST['id'];
-    $conexion=mysqli_connect("localhost","admin","admin","proyecto_webfinal");
+    $conexion=mysqli_connect("localhost","admin","admin","proyecto_f");
     $consulta="SELECT * FROM profesor WHERE PROFESOR_ID = '$id'";
     $resultado=mysqli_query($conexion,$consulta);
     $fila = $resultado->fetch_assoc();

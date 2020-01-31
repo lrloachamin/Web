@@ -54,6 +54,7 @@ body {
 <link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
 <script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
 <link rel="stylesheet" href="../Css/estilos.css">
+<link rel="stylesheet" href="../../css/principal.css">
 </head> 
 <body>
 
@@ -64,9 +65,13 @@ body {
 </li>
   </ul>
 </div>
-<h1>MODIFICAR DOCENTE</h1>
-	
-<div id="apDiv2">
+ <div class="contenedor">
+        <header class="header">
+            <center>
+               <h2>MODIFICAR DOCENTE</h2>
+            </center>
+</header>
+<main class="contenido">
  
   <table class="tabla" width="726" height="159" border="1">
     
@@ -82,7 +87,7 @@ body {
 	</tr>
 	
 	<?php
-    $conexion=mysqli_connect("localhost","admin","admin","proyecto_webfinal");
+    $conexion=mysqli_connect("localhost","admin","admin","proyecto_f");
     $consulta="SELECT * FROM profesor";
     $resultado=mysqli_query($conexion,$consulta);
     while($fila = $resultado->fetch_assoc()){
@@ -132,7 +137,16 @@ body {
 	}
 	?>
   </table>
+  </main>
+     <footer class="footer">
+            <center>
+                <p>Derechos Reservados ©<p>
+                        <p>Comunicarse al 234567 para mas información</p>
+                        <p>Derechos Reservados</p>
+            </center>
+        </footer>
 </div>
+
 <script type="text/javascript">
 var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
 </script>

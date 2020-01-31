@@ -38,8 +38,30 @@
                 }
             });
         });
+		  $('#generarHorario').on('click', function() {
+            $.ajax({
+                type: "POST",
+                url: "generarHorarios.html",
+                success: function(response) {
+                    $('#div-results').html(response);
+                }
+            });
+        });
+		  $('#mostrarHorario').on('click', function() {
+            $.ajax({
+                type: "POST",
+                url: "../php/mostrarHorario.php",
+                success: function(response) {
+                    $('#div-results').html(response);
+                }
+            });
+        });
+		
 
     });
+	
+	
+	
 
 </script>
 
@@ -76,11 +98,19 @@
                         <li><a href="materia/modificarDatos.php" id="modificarMateria">Modificar</a></li>
                     </ul>
                 </li>
+                   
+                </li>
+                    
+                 <li><a href="#" id="generarHorario">Generar Horario</a>
+                 <li><a href="#" id="mostrarHorario" >Mostrar Horario</a>
             </ul>
         </main>
 
         <div class="widget-1">
-            <div id="div-results"></div>
+            <div id="div-results">
+           <img src="../img/prin.jpg"  height="100%" width="100%"/>
+            
+            </div>
         </div>
 
         <footer class="footer">
